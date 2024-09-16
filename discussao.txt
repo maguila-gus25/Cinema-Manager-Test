@@ -1,0 +1,61 @@
+sistema de gerenciamento de um cinema: 
+
+Classes
+
+    Filme
+        Atributos: título, duração, gênero, classificação etária, sinopse.
+        Métodos: adicionarFilme(), atualizarFilme(), removerFilme().
+
+    Sessão
+        Atributos: filme, sala, horário, data, ingressosDisponíveis.
+        Métodos: criarSessão(), atualizarSessão(), cancelarSessão().
+
+    Sala
+        Atributos: número, capacidade, tipo (2D, 3D, IMAX).
+        Métodos: adicionarSala(), atualizarSala(), removerSala().
+
+    Ingresso
+        Atributos: sessão, assento, preço, status (disponível, vendido).
+        Métodos: emitirIngresso(), cancelarIngresso(), verificarDisponibilidade().
+
+    Cliente
+        Atributos: nome, email, telefone, históricoDeCompras.
+        Métodos: cadastrarCliente(), atualizarCliente(), removerCliente().
+
+    Funcionário
+        Atributos: nome, cargo, horárioDeTrabalho.
+        Métodos: adicionarFuncionário(), atualizarFuncionário(), removerFuncionário().
+
+    Venda
+        Atributos: cliente, ingressos, total, data, métodoDePagamento.
+        Métodos: registrarVenda(), cancelarVenda(), gerarRecibo().
+
+Funcionalidades
+
+    Gerenciamento de Filmes
+        Adicionar, atualizar e remover filmes do catálogo.
+        Listar filmes em cartaz e próximos lançamentos.
+
+    Gerenciamento de Sessões
+        Criar, atualizar e cancelar sessões de filmes.
+        Verificar disponibilidade de ingressos para cada sessão.
+
+    Gerenciamento de Salas
+        Adicionar, atualizar e remover salas de cinema.
+        Atribuir sessões às salas disponíveis.
+
+    Venda de Ingressos
+        Emitir ingressos para sessões específicas.
+        Cancelar ingressos e processar reembolsos.
+
+    Cadastro de Clientes
+        Registrar novos clientes e atualizar informações existentes.
+        Manter histórico de compras e preferências de clientes.
+
+    Gerenciamento de Funcionários
+        Adicionar, atualizar e remover funcionários.
+        Gerenciar horários de trabalho e funções.
+
+    Relatórios e Análises
+        Gerar relatórios de vendas, ocupação de salas e desempenho de filmes.
+        Analisar dados para otimizar operações e marketing.
