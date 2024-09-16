@@ -48,10 +48,7 @@ Funcionalidades
         Registrar novos clientes e atualizar informações existentes.
         Manter histórico de compras e preferências de clientes.
 
-    Gerenciamento de Funcionários
-        Adicionar, atualizar e remover funcionários.
-        Gerenciar horários de trabalho e funções.
-
     Relatórios e Análises
-        Gerar relatórios de vendas, ocupação de salas e desempenho de filmes.
-        Analisar dados para otimizar operações e marketing.
+        Horário com as sessões mais vendidas.
+        Filmes vais vendidos.
+        
