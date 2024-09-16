@@ -22,10 +22,6 @@ Classes
         Atributos: nome, email, telefone, históricoDeCompras.
         Métodos: cadastrarCliente(), atualizarCliente(), removerCliente().
 
-    Funcionário
-        Atributos: nome, cargo, horárioDeTrabalho.
-        Métodos: adicionarFuncionário(), atualizarFuncionário(), removerFuncionário().
-
     Venda
         Atributos: cliente, ingressos, total, data, métodoDePagamento.
         Métodos: registrarVenda(), cancelarVenda(), gerarRecibo().
