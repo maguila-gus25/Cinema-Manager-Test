@@ -51,4 +51,20 @@ Funcionalidades
     Relatórios e Análises
         Horário com as sessões mais vendidas.
         Filmes vais vendidos.
+
+
+Problemas Encontrados:
+
+    Contador de Ingressos por sessão:
+        Possiveis soluções: simplificar e fazer um cinema de uma única sala - como é no cinema do campeche
+
+    Registro de Vendas
+        Possiveis soluções: preciso estudar mais sobre
+
+    Gerenciamento de Horarios: Se um horario já está ocupado, sua sessao não será resgistrada. 
+        Possíveis soluções: Uma ideia é o uso de array ou matriz para resolver esses problema, comparando o input
+        da lista de horarios. 
+
+
+
         
