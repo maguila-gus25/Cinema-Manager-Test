@@ -27,7 +27,27 @@ filme10.adicionarFilme()
 
 #Criando Sessoes
 
-sessao2 = Sessao(filme=filme9, sala=Sala(2, 50, "VIP"), data="20/09/2024", horario="19:00", ingressos_disponiveis=50)
+sessao1 = Sessao(filme=filme1, sala=Sala(1, 100, "2D"), horario="14:00", ingressos_disponiveis=100)
+sessao2 = Sessao(filme=filme2, sala=Sala(2, 50, "VIP"), horario="19:00", ingressos_disponiveis=50)
+sessao3 = Sessao(filme=filme3, sala=Sala(1, 100, "2D"), horario="14:00", ingressos_disponiveis=100)
+sessao4 = Sessao(filme=filme4, sala=Sala(2, 50, "VIP"), horario="19:00", ingressos_disponiveis=50)
+sessao5 = Sessao(filme=filme5, sala=Sala(1, 100, "2D"), horario="14:00", ingressos_disponiveis=100)
+sessao6 = Sessao(filme=filme6, sala=Sala(2, 50, "VIP"), horario="19:00", ingressos_disponiveis=50)
+sessao7 = Sessao(filme=filme7, sala=Sala(1, 100, "2D"), horario="14:00", ingressos_disponiveis=100)
+sessao8 = Sessao(filme=filme8, sala=Sala(2, 50, "VIP"), horario="19:00", ingressos_disponiveis=50)
+sessao9 = Sessao(filme=filme9, sala=Sala(1, 100, "2D"), horario="14:00", ingressos_disponiveis=100)
+sessao10 = Sessao(filme=filme10, sala=Sala(2, 50, "VIP"), horario="19:00", ingressos_disponiveis=50)
+
+sessao1.adicionarSessao()
+sessao2.adicionarSessao()
+sessao3.adicionarSessao()
+sessao4.adicionarSessao()
+sessao5.adicionarSessao()
+sessao6.adicionarSessao()
+sessao7.adicionarSessao()
+sessao8.adicionarSessao()
+sessao9.adicionarSessao()
+sessao10.adicionarSessao()
 
 #Exemplo de Uso 2: Atualizar um Filme
 
