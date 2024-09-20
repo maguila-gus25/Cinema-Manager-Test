@@ -65,6 +65,9 @@ Problemas Encontrados:
         Possíveis soluções: Uma ideia é o uso de array ou matriz para resolver esses problema, comparando o input
         da lista de horarios. 
 
+Soluções Possíveis:
+
+    Quando executada a compra de um ingresso, atualizar a sessao com -1 ingresso disponível.
 
 
         
