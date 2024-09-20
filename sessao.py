@@ -70,3 +70,8 @@ class Sessao:
                 f"Sala: {self.__sala}\n"
                 f"Horário: {self.__horario}\n"
                 f"ingressos_disponiveis: {self.__ingressos_disponiveis}\n")
+
+
+    def infoSessoes(self):
+        for sessao in sessoes:
+            print(f"Filme: {sessao.filme.titulo}, Sala: {sessao.sala.tipo}, Horário: {sessao.horario}, Ingressos disponíveis: {sessao.ingressos_disponiveis}")
