@@ -73,5 +73,5 @@ class Sessao:
 
 
     def infoSessoes(self):
-        for sessao in sessoes:
+        for sessao in sessoes_db:
             print(f"Filme: {sessao.filme.titulo}, Sala: {sessao.sala.tipo}, Horário: {sessao.horario}, Ingressos disponíveis: {sessao.ingressos_disponiveis}")
