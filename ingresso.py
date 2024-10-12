@@ -41,16 +41,6 @@ class Ingresso:
     def preco(self, preco: float):
         self.__preco = preco
 
-    @property
-    def status(self) -> str:
-        return self.__status
-
-    @status.setter
-    def status(self, status: str):
-        if status in ["disponível", "vendido"]:
-            self.__status = status
-        else:
-            raise ValueError("Status deve ser 'disponível' ou 'vendido'")
 
     def emitirIngresso(self):
         """Marca o ingresso como vendido, se disponível."""
