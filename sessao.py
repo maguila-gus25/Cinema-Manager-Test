@@ -4,15 +4,16 @@
 
 from filme import Filme
 from sala import Sala
+from datetime import time
 
 class Sessao:
 
     sessoes_db = []
 
-    def __init__(self, filme: Filme, sala: Sala, horario, ingressos_disponiveis):
+    def __init__(self, filme: Filme, sala: Sala, horario: time, ingressos_disponiveis):
         self.__filme = filme
         self.__sala = sala
-        self.__horario = horario
+        self.__horario = time
         self.__ingressos_disponiveis = ingressos_disponiveis
 
     @property
