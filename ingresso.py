@@ -5,7 +5,7 @@
 from sessao import Sessao
 from sala import Sala
 from filme import Filme
-
+from datetime import time
 
 class Ingresso:
 
@@ -35,12 +35,15 @@ class Ingresso:
 
     def emitirIngresso(self):
         """Marca o ingresso como vendido, se disponível."""
-        if sessao.__ingressos_diponiveis > 0:
-            Ingresso.ingressos_db.append(self)
-            sessao.__ingresso_diponiveis -= 1
-            print(f"Ingresso para o filme {self.__sessao.__filme} foi vendido.")
+        if self.__sessao.__horario > time.now():
+            if self.__sessao.__ingressos_diponiveis > 0:
+                self.ingressos_db.append(self)
+                self.__sessao.__ingresso_diponiveis -= 1
+                print(f"Ingresso para o filme {self.__sessao.__filme} foi vendido.")
+            else:
+                print(f"Ingresso para o assento {self.__assento} já foi vendido.")
         else:
-            print(f"Ingresso para o assento {self.__assento} já foi vendido.")
+            print("Horário indisponível. Volte amanhã!")
 
     def cancelarIngresso(self):
         """Cancela o ingresso, se vendido."""
