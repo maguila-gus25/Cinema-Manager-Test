@@ -24,14 +24,6 @@ class Ingresso:
     @sessao.setter
     def sessao(self, sessao: Sessao):
         self.__sessao = sessao
-    
-    @property
-    def assento(self) -> str:
-        return self.__assento
-
-    @assento.setter
-    def assento(self, assento: str):
-        self.__assento = assento
 
     @property
     def preco(self) -> float:
