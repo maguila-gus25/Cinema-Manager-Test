@@ -11,11 +11,10 @@ class Ingresso:
 
     ingressos_db = []
 
-    def __init__(self, sessao: Sessao, assento: str, preco: float, status: str = "disponível"):
+    def __init__(self, sessao: Sessao, assento: str, preco: float):
         self.__sessao = sessao
         self.__assento = assento
         self.__preco = preco
-        self.__status = status
 
     @property
     def sessao(self) -> Sessao:
@@ -36,22 +35,20 @@ class Ingresso:
 
     def emitirIngresso(self):
         """Marca o ingresso como vendido, se disponível."""
-        if self.__status == "disponível":
-            self.__status = "vendido"
+        if sessao.__ingressos_diponiveis > 0:
             Ingresso.ingressos_db.append(self)
-            print(f"Ingresso para o assento {self.__assento} foi vendido.")
+            sessao.__ingresso_diponiveis -= 1
+            print(f"Ingresso para o filme {self.__sessao.__filme} foi vendido.")
         else:
             print(f"Ingresso para o assento {self.__assento} já foi vendido.")
 
     def cancelarIngresso(self):
         """Cancela o ingresso, se vendido."""
-        if self.__status == "vendido":
-            self.__status = "disponível"
-            Ingresso.ingressos_db.remove(self)
-            print(f"Ingresso para o assento {self.__assento} foi cancelado e está disponível novamente.")
-        else:
-            print(f"Ingresso para o assento {self.__assento} não foi vendido, portanto não pode ser cancelado.")
+        self.__sessao.__ingressos_disponiveis += 1
+        self.ingressos_db.remove(self)
+        print(f"Ingresso para o filme {self.__sessao.__filme} foi cancelado e está disponível novamente.")
+        
 
     def verificarDisponibilidade(self):
         """Verifica se o ingresso está disponível."""
-        return self.__status == "disponível"
+        return self.__sessao.__ingressos_disponiveis > 0
