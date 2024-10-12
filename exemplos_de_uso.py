@@ -49,6 +49,30 @@ sessao8.adicionarSessao()
 sessao9.adicionarSessao()
 sessao10.adicionarSessao()
 
+sala1 = Sala(numero=1, capacidade=100, tipo="3D")
+sala2 = Sala(numero=2, capacidade=50, tipo="VIP")
+sala3 = Sala(numero=3, capacidade=100, tipo="2D")
+sala4 = Sala(numero=4, capacidade=50, tipo="VIP")
+sala5 = Sala(numero=5, capacidade=100, tipo="3D")
+sala6 = Sala(numero=6, capacidade=50, tipo="VIP")
+sala7 = Sala(numero=7, capacidade=100, tipo="2D")
+sala8 = Sala(numero=8, capacidade=50, tipo="VIP")
+sala9 = Sala(numero=9, capacidade=100, tipo="3D")
+sala10 = Sala(numero=10, capacidade=50, tipo="VIP")
+
+sala1 = adicionarSala()
+sala2 = adicionarSala()
+sala3 = adicionarSala()
+sala4 = adicionarSala()
+sala5 = adicionarSala()
+sala6 = adicionarSala()
+sala7 = adicionarSala()
+sala8 = adicionarSala()
+sala9 = adicionarSala()
+sala10 = adicionarSala()
+
+
+
 #Exemplo de Uso 2: Atualizar um Filme
 
 filme1.atualizarFilme(titulo="O Poderoso Chefão - Parte I", duracao="3h", sinopse="Atualizada sinopse da saga da família Corleone.")
