@@ -121,7 +121,7 @@ Contributions are welcome! To contribute to the project:
 
 ## 👥 Authors
 
-- maguila-gorila25 - [@maguila-gorila25](https://github.com/maguila-gorila25)
+- maguila-gus25 - [@maguila-gus25](https://github.com/maguila-gus25)
 
 ## 🙏 Acknowledgments
 
