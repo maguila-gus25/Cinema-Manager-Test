@@ -1,69 +1,113 @@
-# 🎬 Cinema Manager
+# Cinema Manager System
 
-A complete cinema management system developed in Python.
+A Python-based cinema management system that handles movies, rooms, sessions, tickets, sales, and clients.
 
-## 📋 About the Project
-
-Cinema Manager is a robust cinema management system developed in Python with SQLite database. The system provides complete control over movies, rooms, sessions, tickets, and sales, offering a comprehensive solution for cinema administrators.
-
-## ✨ Main Features
-
-### 🎬 Movie Management
-- Movie registration with title, duration, genre, and rating
-- Movie update and removal
-- Synopsis and detailed information control
-
-### 🎪 Room Management
-- Room registration with number, type, and capacity
-- Seat management per room
-- Seat availability control
-
-### 🎫 Session Management
-- Session scheduling by movie and room
-- Time and date control
-- Available tickets monitoring
-
-### 💰 Sales Management
-- Customer registration
-- Ticket sales processing
-- Receipt generation
-- Purchase history
-
-## 🛠️ Technologies Used
-
-- Python
-- SQLite
-- SQL
-- OOP (Object-Oriented Programming)
-
-## 🚀 Getting Started
-
-To start using Cinema Manager, follow these steps:
-
-```bash
-# Clone the repository
-git clone https://github.com/your-username/cinema-manager.git
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the system
-python main.py
-```
-
-## 📚 Project Structure
+## Project Structure
 
 ```
 cinema-manager/
-├── database.py      # Database configuration
-├── filme.py         # Movie management class
-├── sala.py          # Room management class
-├── sessao.py        # Session management class
-├── ingresso.py      # Ticket management class
-├── cliente.py       # Customer management class
-├── venda.py         # Sales management class
-└── main.py          # Main execution script
+├── database.py           # Database configuration and connection
+├── movie.py             # Movie class and operations
+├── room.py              # Room class and operations
+├── session.py           # Session class and operations
+├── ticket.py            # Ticket class and operations
+├── sale.py              # Sale class and operations
+├── client.py            # Client class and operations
+└── main.py              # Main application and example usage
 ```
+
+## Database Structure
+
+The system uses SQLite with the following tables:
+
+- `movies`: Stores movie information
+- `rooms`: Stores room information
+- `seats`: Stores seat information
+- `sessions`: Stores session information
+- `tickets`: Stores ticket information
+- `sales`: Stores sale information
+- `clients`: Stores client information
+
+## Features
+
+- Movie Management
+  - Add, update, and remove movies
+  - Track movie details (title, duration, genre, age rating, synopsis)
+
+- Room Management
+  - Add, update, and remove rooms
+  - Track room details (number, type, capacity)
+
+- Session Management
+  - Create, update, and cancel sessions
+  - Track session details (movie, room, time, date, available tickets)
+
+- Ticket Management
+  - Issue and cancel tickets
+  - Check ticket availability
+  - Track ticket status
+
+- Sale Management
+  - Register and cancel sales
+  - Generate receipts
+  - Track payment methods and totals
+
+- Client Management
+  - Track client information
+  - Maintain purchase history
+
+## Getting Started
+
+1. Clone the repository
+2. Install dependencies (if any)
+3. Run `main.py` to initialize the database and see example usage
+
+## Example Usage
+
+```python
+# Initialize database
+from database import init_db
+init_db()
+
+# Create a movie
+from movie import Movie
+movie = Movie("Inception", 148, "Sci-Fi", "PG-13", "A thief who steals corporate secrets...")
+movie.add_movie()
+
+# Create a room
+from room import Room
+room = Room(1, "Standard", 100)
+room.add_room()
+
+# Create a session
+from session import Session
+session = Session(movie.id, room.id, "19:00", "2024-03-20", 100)
+session.create_session()
+
+# Create a ticket
+from ticket import Ticket
+ticket = Ticket(session.id, 1, 15.00)
+ticket.issue_ticket()
+
+# Register a client
+from client import Client
+client = Client("John Doe", "john@example.com", "1234567890")
+client.save()
+
+# Make a sale
+from sale import Sale
+sale = Sale(client.id, ticket.id, "Credit Card", 15.00)
+sale.register_sale()
+```
+
+## Dependencies
+
+- Python 3.x
+- SQLite3
+
+## License
+
+This project is free to use for anyone. Feel free to use, modify, and distribute it as you wish.
 
 ## 🤝 Contributing
 
@@ -75,13 +119,9 @@ Contributions are welcome! To contribute to the project:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 👥 Authors
 
-- Your Name - [@yourusername](https://github.com/yourusername)
+- maguila-gorila25 - [@maguila-gorila25](https://github.com/maguila-gorila25)
 
 ## 🙏 Acknowledgments
 
